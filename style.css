@@ -1,31 +1,41 @@
 :root {
-    --primary: #2563eb;
-    --danger: #dc2626;
-    --bg: #f8fafc;
+    --rojo: #d93025;
+    --azul: #1a73e8;
+    --negro: #202124;
+    --gris-fondo: #f8f9fa;
+    --blanco: #ffffff;
+    --borde: #dadce0;
 }
 
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--gris-fondo); color: var(--negro); margin: 0; padding: 20px; }
 .container { max-width: 600px; margin: auto; }
-header { text-align: center; margin-bottom: 30px; }
 
-.input-section { display: flex; gap: 10px; margin-bottom: 20px; }
-input { flex: 1; padding: 12px; border: 2px solid #ddd; border-radius: 8px; outline: none; }
-input:focus { border-color: var(--primary); }
+.panel-supervisores h2, .panel-supervisores h3 { text-align: center; border-bottom: 2px solid var(--negro); padding-bottom: 5px; }
 
-button { padding: 12px 20px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+section { background: var(--blanco); border: 1px solid var(--borde); border-radius: 8px; padding: 15px; margin-bottom: 15px; }
 
-.renta-card { 
-    background: white; 
-    padding: 20px; 
-    margin-bottom: 15px; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.seccion-inicio h3 { border: none; padding-bottom: 0; }
+.opciones-vehiculos { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
 
-.info-cliente strong { font-size: 1.1rem; color: #1e293b; }
-.timer { font-family: monospace; font-size: 1.4rem; font-weight: bold; color: var(--danger); }
-.btn-finalizar { background: #fee2e2; color: var(--danger); padding: 8px 15px; }
-.btn-finalizar:hover { background: var(--danger); color: white; }
+.btn-opcion { background: var(--blanco); color: var(--azul); border: 2px solid var(--azul); border-radius: 5px; padding: 8px 12px; cursor: pointer; }
+.btn-opcion.seleccionado { background: var(--azul); color: var(--blanco); }
+
+.btn-accion-grande { display: block; width: 100%; padding: 12px; font-weight: bold; border-radius: 5px; border: none; cursor: pointer; text-transform: uppercase; }
+#btn-iniciar { background: var(--azul); color: var(--blanco); }
+
+.renta-card { background: var(--blanco); border: 1px solid var(--borde); border-radius: 8px; padding: 15px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 10px; }
+.renta-encabezado { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--borde); padding-bottom: 5px; }
+.renta-card strong { font-size: 1.1rem; }
+.renta-tiempo-inicio { color: #5f6368; }
+
+.renta-cuerpo { display: flex; justify-content: space-between; align-items: center; }
+.timer-digital { font-family: 'Courier New', monospace; font-size: 1.8rem; font-weight: bold; color: var(--rojo); background: #fee7e6; padding: 5px 10px; border-radius: 4px; border: 2px solid var(--rojo); }
+
+.renta-controles { display: flex; gap: 10px; }
+.btn-finalizar { background: var(--blanco); color: var(--rojo); border: 2px solid var(--rojo); }
+.btn-extender { background: var(--gris-fondo); color: #5f6368; border: 2px solid #5f6368; }
+
+.seccion-resumen { padding-top: 0; }
+.encabezado-resumen { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.btn-limpiar { background: none; border: none; color: #5f6368; text-decoration: underline; cursor: pointer; font-size: 0.8rem; }
+.resumen-card { border-bottom: 1px solid var(--borde); padding: 8px 0; font-size: 0.9rem; }
