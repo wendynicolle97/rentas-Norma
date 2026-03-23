@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de Rentas - Nicolle</title>
+    <title>Sistema de Control de Rentas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Gestión de Rentas ⏱️</h1>
-            <p>Carros y Triciclos</p>
-        </header>
-        
-        <div class="input-section">
-            <input type="text" id="nombreCliente" placeholder="Ej: Carro Azul - Juan">
-            <button onclick="iniciarRenta()">Iniciar Renta</button>
+        <div class="panel-supervisores">
+            <h2>PROGRAMA CONTROL TIEMPO RENT</h2>
         </div>
 
-        <div id="listaRentas" class="rentas-grid">
+        <section class="seccion-inicio">
+            <h3>Seleccionar Carro:</h3>
+            <div class="opciones-vehiculos">
+                <button type="button" class="btn-opcion" onclick="seleccionarVehiculo(this, 'Triciclo')">Triciclo</button>
+                <button type="button" class="btn-opcion" onclick="seleccionarVehiculo(this, 'Moto roja')">Moto roja</button>
+                <button type="button" class="btn-opcion" onclick="seleccionarVehiculo(this, 'bici amarilla')">bici amarilla</button>
+                </div>
+            <button type="button" class="btn-accion-grande" id="btn-iniciar" onclick="iniciarRenta()">INICIAR</button>
+        </section>
+
+        <section class="seccion-rentas">
+            <div id="listaRentasActivas">
+                </div>
+        </section>
+
+        <section class="seccion-resumen">
+            <div class="encabezado-resumen">
+                <h3 class="panel-supervisores">Rentas del día:</h3>
+                <button onclick="borrarRegistroDiario()" class="btn-limpiar">Limpiar día</button>
             </div>
+            <div id="tablaRentasDiarias">
+                </div>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>
